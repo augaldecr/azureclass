@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+.card {
+  height: 314px;
+  perspective: 500px;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 508px;
+}
+
+.card .face {
+  backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-style: preserve-3d;
+  transition: 1s;
+  width: 100%;
+}
+
+.card:hover .face.front {
+  transform: rotateY(180deg);
+}
+
+.card .face.back {
+  transform: rotateY(180deg);
+}
+
+.card:hover .face.back {
+  transform: rotateY(360deg);
+}
+
+.card .face.front::before {
+  background: #fff;
+  border-radius: 50%;
+  bottom: 40px;
+  content: "";
+  height: 60px;
+  opacity: 0.5;
+  position: absolute;
+  right: 40px;
+  width: 60px;
+}
+
+.card .face.front::after {
+  background: #fff;
+  border-radius: 50%;
+  bottom: 40px;
+  content: "";
+  height: 60px;
+  opacity: 0.7;
+  position: absolute;
+  right: 80px;
+  width: 60px;
+}
+
+.card .face.front .debit {
+  color: #fff;
+  font-weight: 500;
+  left: 40px;
+  position: absolute;
+  top: 30px;
+}
+
+.card .face.front .bank {
+  color: #fff;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  right: 40px;
+  position: absolute;
+  top: 25px;
+}
+
+.card .face.front .chip {
+  left: 50px;
+  max-width: 64px;
+  position: absolute;
+  top: 80px;
+}
+
+.card .face.front .number {
+  position: absolute;
+  bottom: 130px;
+  left: 40px;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  letter-spacing: 6px;
+  font-size: 18px;
+  text-shadow: 0 2px 1px #0005;
+}
+
+.card .face.front .valid {
+  align-items: center;
+  bottom: 90px;
+  color: #fff;
+  display: flex;
+  font-weight: 300;
+  justify-content: center;
+  left: 40px;
+  line-height: 1em;
+  position: absolute;
+  text-align: right;
+}
+
+.card .face.front .valid span:last-child {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-left: 20px;
+}
+
+.card .face.front .cardHolder {
+  bottom: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  left: 40px;
+  letter-spacing: 2px;
+  position: absolute;
+}
+
+.card .face.back .blackBar {
+  background: #000;
+  height: 60px;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+
+.card .face.back .ccvText {
+  left: 30px;
+  position: absolute;
+  top: 120px;
+}
+
+.card .face.back .ccvText h5 {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card .face.back .ccvText .whiteBar {
+  background: #fff;
+  height: 40px;
+  margin-top: 5px;
+  position: relative;
+  width: 400px;
+}
+
+.card .face.back .ccvText .ccv {
+  align-items: center;
+  background: #ccc;
+  color: #111;
+  display: flex;
+  height: 30px;
+  font-weight: 600;
+  justify-content: center;
+  left: 395px;
+  letter-spacing: 3px;
+  position: relative;
+  top: -35px;
+  width: 50px;
+}
+
+.text {
+  bottom: 30px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 300;
+  left: 30px;
+  line-height: 1.4em;
+  position: absolute;
+  right: 30px;
+}

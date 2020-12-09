@@ -1,10 +1,12 @@
+import React from "react";
 import "./App.css";
+import { Card } from "./components/Card";
 
 function App() {
   return (
-    <div className="App">
-      <p>Prueba de React</p>
-    </div>
+    <section>
+      <Card name="Alonso Ugalde Aguilar" />
+    </section>
   );
 }
 
