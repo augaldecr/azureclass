@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Card.css";
 import chip from "../../Assets/chip.png";
 
 const Card = ({ name }) => {
+  useEffect(() => {
+    alert(
+      "'Credit card design' from https://www.youtube.com/watch?v=XeX1vsaufF0&ab_channel=OnlineTutorials."
+    );
+  }, []);
+
   return (
     <div className="card">
       <div className="face front">

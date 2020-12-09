@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Design disclaimer
+
+'Credit card design' from [Online Tutorials](https://www.youtube.com/watch?v=XeX1vsaufF0&ab_channel=OnlineTutorials).
+
 ## Available Scripts
 
 In the project directory, you can run:
